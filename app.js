@@ -1,6 +1,6 @@
 // local reviews data
 
-// i am setting up data locally because i havcent learned ajax or how to setup
+// i am setting up data locally because i haven't learned ajax or how to setup
 // http requests.
 // that is why i will use local data in these DOM PROJECTS
 
@@ -59,7 +59,7 @@ const prevBtn = document.querySelector('.prev-btn') /*accessing classes i use qu
 const nextBtn = document.querySelector('.next-btn')
 const randomBtn = document.querySelector('.random-btn')
 
-//  i need to setup some sort of value in my array 
+//  now i need to setup some sort of value in my array 
 // so i will start with 0 index since it is an array
 
 
