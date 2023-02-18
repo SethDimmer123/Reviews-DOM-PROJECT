@@ -1,9 +1,8 @@
 // local reviews data
 
 // i am setting up data locally because i havcent learned ajax or how to setup
-// http requests
-
-// thta is why i will use local data in these DOM PROJECTS
+// http requests.
+// that is why i will use local data in these DOM PROJECTS
 
 const reviews = [ /*array of objects*/
 // 4 items
