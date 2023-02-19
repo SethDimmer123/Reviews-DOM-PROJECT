@@ -162,7 +162,32 @@ function showPerson(number) {
 
 // show next person
 
+nextBtn.addEventListener('click',function(){
+    currentItem++
+    if(currentItem > reviews.length - 1){ // the -1 reflects the actual last item in my array
+        // if the currentItem is GREATER than the length of the reviews array 
+        // if im at the last item in the array then i will start from scratch
+        currentItem = 0
+    }
+    // if i am at my last item in the array thenthe currentItem is 0 so start from scratch
+    showPerson(currentItem)
+})
 
+
+prevBtn.addEventListener('click',function(){
+    currentItem--;
+    if(currentItem < 0){ // the -1 reflects the actual last item in my array
+        currentItem = reviews.length - 1;
+    }
+    // if i am at my last item in the array thenthe currentItem is 0 so start from scratch
+    showPerson(currentItem)
+
+
+
+    // challenge
+
+    
+})
 
 
 
