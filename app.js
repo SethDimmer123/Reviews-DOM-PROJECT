@@ -83,11 +83,11 @@ let currentItem = 0;
 
 // I DO THAT BY SELECTING THE FIRST ITEM(object)
 
-// then with all of the variables i have i will replace the values of the id and classes from the 
-// index.html (DYNAMICALLY).
+// then with all of the variables i have i will replace the values of the id 
+// and classes from the index.html (DYNAMICALLY).
 
 
-// load initial item
+// load initial item(5:30)
 // we add event listener on the window object because i am adding it to the current window 
 // (tab) i am on.
 
@@ -101,11 +101,17 @@ window.addEventListener('DOMContentLoaded',function(){
     // console.log('seth')
 
     // but now i want to access my first item how do i do that?(6:20)
-    const item = reviews[currentItem]// i access my first item in my array by using the 
-    // reviews array and put it in a variable.
-    // and pass in my currentItem
+    const item = reviews[currentItem]
+    // i now have access to my first item in my array which is 0 by using the 
+    // reviews array and put it in a variable which is item.
+    // and pass in my currentItem in the reviews array
 
-    // img.src = item.img
+    img.src = item.img
+    // for image i have the src property
+    // i set it equal to my image because i assigned the first object(item) with
+    // the id of 1 
+    // in my first object(item) i have a the img property which gives me the image
+    // of that object
 })
 
 
