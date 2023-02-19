@@ -158,6 +158,11 @@ function showPerson(number) {
 // then pass in the currentItem variable so i can reuse the showPerson function
 
 
+// i can now setup 2 event listeners for my 2 arrow buttons
+
+// show next person
+
+
 
 
 
