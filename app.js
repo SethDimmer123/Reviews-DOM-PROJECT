@@ -39,11 +39,11 @@ const reviews = [ /*array of objects*/
 //   what do i want to happen.
 
 // what i want to do is i want to access the items from the html
-// meaning i  want to access the image,author,and job info 
+// meaning i want to access the image,author,and job info .
 
 // i want to change the information DYNAMICALLY when i click one of the arrow buttons
 
-//  as well as have a math.random on the surpise me button to generate the random a  object 
+//  as well as have a math.random on the Surpise Me button to generate the random a object 
 // in the array of 4 that i have.
 
 // select items
@@ -55,12 +55,67 @@ const author = document.getElementById('author')
 const job = document.getElementById('job')
 const info = document.getElementById('info')
 
-const prevBtn = document.querySelector('.prev-btn') /*accessing classes i use query selector*/
+/*accessing classes i use query selector*/
+
+// i could use a forEach and querySelectorAll (refer back to the counter project)
+// to remember how i did it.
+
+const prevBtn = document.querySelector('.prev-btn') 
 const nextBtn = document.querySelector('.next-btn')
 const randomBtn = document.querySelector('.random-btn')
 
-//  now i need to setup some sort of value in my array 
-// so i will start with 0 index since it is an array
+
+//  now i need to setup some sort of variable that stores my starting value in my array.
+// the reviews array with the starting index is 0
+
+// i have 4 items in the array
+
+
+// set starting item with an index of 0 which is the first item 
+// object in the array.
+let currentItem = 0;
+
+
+// now what do i want to do?
+
+// once my document loads i want to access whatever item from the array which 
+// in this case is the first object with the id of 1. 
+
+// I DO THAT BY SELECTING THE FIRST ITEM(object)
+
+// then with all of the variables i have i will replace the values of the id and classes from the 
+// index.html (DYNAMICALLY).
+
+
+// load initial item
+// we add event listener on the window object because i am adding it to the current window 
+// (tab) i am on.
+
+// the DOMContentLoaded event fires when the HTML document has loaded without 
+// waiting for stylesheets,images or subframs to finish loading
+
+// when the DOMContentLoaded has been loaded then the code INSIDE of the function
+// is executed.
+
+window.addEventListener('DOMContentLoaded',function(){
+    // console.log('seth')
+
+    // but now i want to access my first item how do i do that?(6:20)
+    const item = reviews[currentItem]// i access my first item in my array by using the 
+    // reviews array and put it in a variable.
+    // and pass in my currentItem
+
+    // img.src = item.img
+})
+
+
+
+
+
+
+
+
+
 
 
 
