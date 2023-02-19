@@ -51,7 +51,7 @@ const reviews = [ /*array of objects*/
 //  storing them in variables so it is easier to access them 
 
 const img = document.getElementById('person-img')
-const author = document.getElementById('author')
+const author = document.getElementById("author")
 const job = document.getElementById('job')
 const info = document.getElementById('info')
 
@@ -99,20 +99,63 @@ let currentItem = 0;
 
 window.addEventListener('DOMContentLoaded',function(){
     // console.log('seth')
+    showPerson(currentItem)
 
     // but now i want to access my first item how do i do that?(6:20)
-    const item = reviews[currentItem]
+
+    // const item = reviews[currentItem];
+
     // i now have access to my first item in my array which is 0 by using the 
     // reviews array and put it in a variable which is item.
     // and pass in my currentItem in the reviews array
 
-    img.src = item.img
+    // img.src = item.img;
+
     // for image i have the src property
     // i set it equal to my image because i assigned the first object(item) with
     // the id of 1 
     // in my first object(item) i have a the img property which gives me the image
     // of that object
+
+    // author.textContent = item.name;
+    // job.textContent = item.job;
+    // info.textContent = item.text;
+
+    // now since i have the info for 1 item i want to change the info based on
+    // the functinaility of the 2 buttons.(10:30) increasing or decreasing the currentItem
+    // variable on (line 76)
+
+
+
+    // (10:52) BEFORE I increase or decrease the currentItem value which is 
+    // at this point 0
+    // i have REFACTOR MY CODE IN THE event listener above becuase 
+    // even though the code is right when i increase or decrease the item number 
+    // i would have to get the item each time like on line 104 but also change the values
+    // which for example are lines 109,115,116,117
+
+    // INSTEAD OF DOING THAT I WANT A FUNCTION THAT CHANGES THE VALUES FOR ME 
+    // when i have click events for the 3 buttons.
+    // I DO NOT WANT TO COPY AND PASTE THE SAME CODE IN ALL 3 OF MY EVENT LISTENERS
+
+    // I WANT TO SETUP AS A FUNCTION AND REUSE THE FUNCTION
+
+    // HOW TO DO THAT DOWN BELOW
+
 })
+
+// show person based on item number (11:44)
+
+function showPerson(number) {
+    const item = reviews[number];
+    img.src = item.img;
+    author.textContent = item.name;
+    job.textContent = item.job;
+    info.textContent = item.text;
+}
+
+// then i call the function by putting in the DOMContentLoaded function.
+// then pass in the currentItem variable so i can reuse the showPerson function
 
 
 
