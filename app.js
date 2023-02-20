@@ -57,8 +57,6 @@ const info = document.getElementById('info')
 
 /*accessing classes i use query selector*/
 
-// i could use a forEach and querySelectorAll (refer back to the counter project)
-// to remember how i did it.
 
 const prevBtn = document.querySelector('.prev-btn') 
 const nextBtn = document.querySelector('.next-btn')
@@ -103,13 +101,13 @@ window.addEventListener('DOMContentLoaded',function(){
 
     // but now i want to access my first item how do i do that?(6:20)
 
-    // const item = reviews[currentItem];
+    const item = reviews[currentItem];
 
     // i now have access to my first item in my array which is 0 by using the 
     // reviews array and put it in a variable which is item.
     // and pass in my currentItem in the reviews array
 
-    // img.src = item.img;
+    img.src = item.img
 
     // for image i have the src property
     // i set it equal to my image because i assigned the first object(item) with
@@ -117,9 +115,9 @@ window.addEventListener('DOMContentLoaded',function(){
     // in my first object(item) i have a the img property which gives me the image
     // of that object
 
-    // author.textContent = item.name;
-    // job.textContent = item.job;
-    // info.textContent = item.text;
+    author.textContent = item.name;
+    job.textContent = item.job;
+    info.textContent = item.text;
 
     // now since i have the info for 1 item i want to change the info based on
     // the functinaility of the 2 buttons.(10:30) increasing or decreasing the currentItem
@@ -148,7 +146,7 @@ window.addEventListener('DOMContentLoaded',function(){
 
 function showPerson(number) {
     const item = reviews[number];
-    img.src = item.img;
+    item.src = item.img;
     author.textContent = item.name;
     job.textContent = item.job;
     info.textContent = item.text;
@@ -179,17 +177,28 @@ prevBtn.addEventListener('click',function(){
     if(currentItem < 0){ // the -1 reflects the actual last item in my array
         currentItem = reviews.length - 1;
     }
-    // if i am at my last item in the array thenthe currentItem is 0 so start from scratch
-    showPerson(currentItem)
+    // if i am at my last item in the array then the currentItem is 0 so start from scratch
+    showPerson()
 
-
-
-    // challenge
-
-    
 })
 
 
+
+    // challenge for random suprise me button(19:00)
+
+    // add event listener to the randomBtn
+
+    // once the user clicks the button
+
+    // i need to display a random item from the reviews array
+
+
+    randomBtn.addEventListener('click',function(){
+        currentItem = Math.floor(Math.random() * reviews.length)
+        // console.log(currentItem);
+        showPerson(currentItem) 
+    })
+    
 
 
 
